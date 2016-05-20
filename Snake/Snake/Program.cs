@@ -10,7 +10,7 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            Console.SetBufferSize(65, 20); // установить размер окна и убрать возможность перемотки
+           // Console.SetBufferSize(65, 20); // установить размер окна и убрать возможность перемотки
 
             HorizontalLines lineUp = new HorizontalLines(0, 58, 0, '+');
             HorizontalLines lineDown = new HorizontalLines(0, 58, 14, '+');
@@ -23,7 +23,8 @@ namespace Snake
             lineRigth.Drow();
 
             Point p = new Point(4, 5, '*');
-            p.Draw();
+            Snake snake = new Snake(p, 4, Direction.RIGTH);
+            snake.Drow();
 
             Console.ReadLine();
         }
