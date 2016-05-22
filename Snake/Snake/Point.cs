@@ -30,12 +30,14 @@ namespace Snake
             symb = p.symb;
         }
 
+        // отрисовка точки
         public void Draw()
         {
             Console.SetCursorPosition(x, y);
             Console.WriteLine(symb);
         }
 
+        // перемещение точки
         public void Move(int offset, Direction direction)
         {
             if (direction == Direction.RIGTH) { x = x + offset; }
@@ -47,6 +49,12 @@ namespace Snake
         public override string ToString()
         {
             return x + ", " + y + ", " + symb;
+        }
+
+        public void Clear()
+        {
+            symb = ' ';
+            Draw();
         }
     }
 }

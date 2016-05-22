@@ -10,6 +10,7 @@ namespace Snake
     {
         protected List<Point> pList;
 
+        // отрисовка фигуры(гориз. и вертик. линии, змейка)
         public void Drow()
         {
             foreach (Point p in pList)
