@@ -30,6 +30,12 @@ namespace Snake
             symb = p.symb;
         }
 
+        // равенство координат точек
+        public bool isHit(Point p)
+        {
+            return p.x == this.x && p.y == this.y;
+        }
+
         // отрисовка точки
         public void Draw()
         {
